@@ -1,6 +1,4 @@
 import os
-import pythoncom
-import win32com.client as win32
 import shutil
 
 def generate_elvalasztok(borito_dir, oldalelvalaszto_sablon, output_dir):
