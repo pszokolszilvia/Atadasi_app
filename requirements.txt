@@ -1,3 +1,4 @@
 streamlit
+python-docx
 openpyxl
-pywin32
+docxcompose
