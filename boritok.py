@@ -1,6 +1,8 @@
 import os
 import shutil
 from openpyxl import load_workbook
+import win32com.client as win32
+
 
 def generate_boritok(excel_path, sablon_path, output_dir):
     if os.path.exists(output_dir):
@@ -18,7 +20,7 @@ def generate_boritok(excel_path, sablon_path, output_dir):
             if not (font.strike or (font.color and font.color.rgb == "FFFF0000")):
                 relevant_rows.append(f"{sorszam} {cim}".strip())
 
-    pythoncom.CoInitialize()
+    # Eltávolítva: pythoncom.CoInitialize()
     word = win32.gencache.EnsureDispatch("Word.Application")
     word.Visible = False
 
