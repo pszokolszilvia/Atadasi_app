@@ -1,7 +1,5 @@
 import os
 import shutil
-import pythoncom
-import win32com.client as win32
 from openpyxl import load_workbook
 
 def generate_boritok(excel_path, sablon_path, output_dir):
